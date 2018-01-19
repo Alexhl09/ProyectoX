@@ -12,7 +12,7 @@ import CoreMotion
 
 class MyUIView: UIView {
     var ball = SKSpriteNode()
-    var size:CGFloat = 0
+    var size:CGFloat = 50
     
     override func draw(_ rect: CGRect) {
         let view_width = self.bounds.width
