@@ -26,7 +26,7 @@ class MyUIView: UIView {
         ball.physicsBody = SKPhysicsBody(rectangleOf: ball.size)
         
         let context = UIGraphicsGetCurrentContext()
-        let rectangle = CGRect(x: 0, y: view_height + 25 - size,
+        let rectangle = CGRect(x: 0, y: view_height - size,
                                width: view_width, height: size)
         context?.addRect(rectangle)
         context?.setFillColor(UIColor.red.cgColor)
@@ -53,4 +53,7 @@ class MyUIView: UIView {
         size = touch!.force * 100
         self.setNeedsDisplay()
     }
+    
+    
+    
 }
