@@ -46,5 +46,4 @@ class MyUIView: UIView {
         size = touch!.force * 100
         self.setNeedsDisplay()
     }
-
 }
