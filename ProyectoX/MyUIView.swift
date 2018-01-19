@@ -12,14 +12,21 @@ import CoreMotion
 
 class MyUIView: UIView {
     var ball = SKSpriteNode()
-    var size:CGFloat = 50
+    var size:CGFloat = 0
+    
+    func crearRectangulo()
+    {
+        
+    }
     
     override func draw(_ rect: CGRect) {
         let view_width = self.bounds.width
         let view_height = self.bounds.height
+        ball = SKSpriteNode(imageNamed: "play")
+        ball.physicsBody = SKPhysicsBody(rectangleOf: ball.size)
         
         let context = UIGraphicsGetCurrentContext()
-        let rectangle = CGRect(x: 0, y: view_height - size,
+        let rectangle = CGRect(x: 0, y: view_height + 25 - size,
                                width: view_width, height: size)
         context?.addRect(rectangle)
         context?.setFillColor(UIColor.red.cgColor)
