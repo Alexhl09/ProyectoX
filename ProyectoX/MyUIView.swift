@@ -8,10 +8,10 @@
 
 import UIKit
 import SpriteKit
+import CoreMotion
 
 class MyUIView: UIView {
     var ball = SKSpriteNode()
-    
     var size:CGFloat = 0
     
     override func draw(_ rect: CGRect) {
