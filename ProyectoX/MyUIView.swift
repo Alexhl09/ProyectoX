@@ -45,13 +45,11 @@ class MyUIView: UIView {
     override func touchesEnded(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
         size = 0
-        self.setNeedsDisplay()
     }
     
     func handleTouch(_ touches:Set<UITouch>) {
         let touch = touches.first
         size = touch!.force * 100
-        self.setNeedsDisplay()
     }
     
     

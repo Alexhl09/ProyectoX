@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="play"/>
                                 <connections>
-                                    <segue destination="BFc-xh-T6f" kind="show" id="aon-N0-dQ8"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="9nX-Od-8ir"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-Zp-G7C">
