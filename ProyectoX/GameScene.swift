@@ -10,29 +10,31 @@ import SpriteKit
 import UIKit
 import GameplayKit
 
-class GameScene: SKScene {
 
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var fuerza = CGFloat()
-    private var asteroide = SKSpriteNode()
     private var label = SKLabelNode()
-    func crearAsteoride()
+    private var bolaBlanca = SKSpriteNode()
+    private var bolaAzul = SKSpriteNode()
+    func crearBola()
     {
-    asteroide = SKSpriteNode(imageNamed: "asteroide")
-    asteroide.setScale(0.1)
-    asteroide.position = CGPoint(x: -300, y: 0)
-    self.addChild(asteroide)
+        bolaBlanca = SKSpriteNode(color: UIColor.white, size: CGSize(width: 50, height: 50))
+        bolaBlanca.position = CGPoint(x: -300, y: 50)
+        self.addChild(bolaBlanca)
     }
-    func crearLabel()
+    func crearBolaAzul()
     {
-        asteroide.size = CGSize(width: 30, height: 30)
-        asteroide.position = CGPoint(x: 0, y: 0)
-        self.addChild(asteroide)
+        bolaAzul = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 50))
+        bolaAzul.position = CGPoint(x: -300, y: -50)
+        self.addChild(bolaAzul)
     }
-  
+    
     override func sceneDidLoad()
     {
-        crearAsteoride()
-  
+        backgroundColor = UIColor.black
+        crearBola()
+        crearBolaAzul()
+        
     }
     override func willMove(from: SKView)
     {
@@ -42,6 +44,9 @@ class GameScene: SKScene {
     {
         
     }
+    
+    
+    //Las funciones de abajo son necesarias para hacer funcionar el 3D touch
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
         handleTouch(touches)
@@ -53,16 +58,17 @@ class GameScene: SKScene {
     }
     override func touchesEnded(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
-        asteroide.position = CGPoint( x: -300 , y: 0)
+        bolaBlanca.position = CGPoint(x: -300, y: 50)
+        bolaAzul.position = CGPoint(x: -300, y: -50)
     }
     override func touchesMoved(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
         handleTouch(touches)
-        asteroide.position = CGPoint(x: asteroide.position.x + fuerza , y: asteroide.position.y)
+        bolaBlanca.position = CGPoint(x: bolaBlanca.position.x, y: bolaBlanca.position.y + fuerza)
+        bolaAzul.position = CGPoint(x: bolaAzul.position.x, y: bolaAzul.position.y - fuerza)
     }
-    override func update(_ currentTime: TimeInterval) {
     
-        
+    override func update(_ currentTime: TimeInterval) {
     }
     
 }
