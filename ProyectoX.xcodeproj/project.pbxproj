@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F764E2A201178B900F3A2EA /* FTouchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F764E29201178B900F3A2EA /* FTouchClass.swift */; };
 		714F44DE20098AD300F7E0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F44DD20098AD300F7E0E6 /* AppDelegate.swift */; };
 		714F44E020098AD300F7E0E6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 714F44DF20098AD300F7E0E6 /* GameScene.sks */; };
 		714F44E220098AD300F7E0E6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 714F44E120098AD300F7E0E6 /* Actions.sks */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F764E29201178B900F3A2EA /* FTouchClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTouchClass.swift; sourceTree = "<group>"; };
 		714F44DA20098AD300F7E0E6 /* ProyectoX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714F44DD20098AD300F7E0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714F44DF20098AD300F7E0E6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -49,6 +47,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711802BF2019A9ED00D93402 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		714F44D120098AD300F7E0E6 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +73,7 @@
 		714F44DC20098AD300F7E0E6 /* ProyectoX */ = {
 			isa = PBXGroup;
 			children = (
+				711802BF2019A9ED00D93402 /* Sounds */,
 				714F44F520098B3D00F7E0E6 /* PantallaInicial.swift */,
 				71A37F66200D7C490054F1D8 /* MyUIView.swift */,
 				714F44F720098EC500F7E0E6 /* Configuracion.swift */,
@@ -80,7 +86,6 @@
 				714F44EA20098AD300F7E0E6 /* Assets.xcassets */,
 				714F44EC20098AD300F7E0E6 /* LaunchScreen.storyboard */,
 				714F44EF20098AD300F7E0E6 /* Info.plist */,
-				5F764E29201178B900F3A2EA /* FTouchClass.swift */,
 			);
 			path = ProyectoX;
 			sourceTree = "<group>";
@@ -165,7 +170,6 @@
 				714F44F620098B3D00F7E0E6 /* PantallaInicial.swift in Sources */,
 				714F44DE20098AD300F7E0E6 /* AppDelegate.swift in Sources */,
 				714F44F820098EC600F7E0E6 /* Configuracion.swift in Sources */,
-				5F764E2A201178B900F3A2EA /* FTouchClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
