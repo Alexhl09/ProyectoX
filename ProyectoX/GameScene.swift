@@ -13,31 +13,32 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var fuerza = CGFloat()
-    private var label = SKLabelNode()
-    private var numero = CGFloat()
     private var bolaBlanca = SKSpriteNode()
     private var initialPlayerPosition : CGPoint!
     private var bolaAzul = SKSpriteNode()
-    var touch = UITouch()
-    var location = CGPoint()
+    private var touch = UITouch()
+    private var location = CGPoint()
     func crearBola()
     {
         bolaBlanca = SKSpriteNode(color: UIColor.white, size: CGSize(width: 50, height: 50))
-        bolaBlanca.position = CGPoint(x: -200, y: -550)
+        bolaBlanca.position = CGPoint(x: -300, y: -550)
         self.addChild(bolaBlanca)
     }
-    func crearBolaAzul()
-    {
-        bolaAzul = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 50))
-        bolaAzul.position = CGPoint(x: -300, y: -50)
-        self.addChild(bolaAzul)
-    }
+//    func crearBolaAzul()
+//    {
+//        bolaAzul = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 50))
+//        bolaAzul.position = CGPoint(x: 0, y: 0)
+//        bolaAzul.physicsBody = SKPhysicsBody(rectangleOf: bolaAzul.size)
+//        bolaAzul.physicsBody?.affectedByGravity = true
+//        bolaAzul.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
+//        self.addChild(bolaAzul)
+//    }
     
     override func sceneDidLoad()
     {
         backgroundColor = UIColor.black
         crearBola()
-        crearBolaAzul()
+//        crearBolaAzul()
     }
     override func willMove(from: SKView)
     {
