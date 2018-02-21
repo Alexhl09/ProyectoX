@@ -17,39 +17,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var numero = CGFloat()
     private var bolaBlanca = SKSpriteNode()
     private var initialPlayerPosition : CGPoint!
-    
-//    private var bolaAzul = SKSpriteNode()
-    
+    private var bolaAzul = SKSpriteNode()
+    var touch = UITouch()
+    var location = CGPoint()
     func crearBola()
     {
         bolaBlanca = SKSpriteNode(color: UIColor.white, size: CGSize(width: 50, height: 50))
-        bolaBlanca.position = CGPoint(x: -200, y: -150)
+        bolaBlanca.position = CGPoint(x: -200, y: -550)
         self.addChild(bolaBlanca)
     }
-//    func crearBolaAzul()
-//    {
-//        bolaAzul = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 50))
-//        bolaAzul.position = CGPoint(x: -300, y: -50)
-//        self.addChild(bolaAzul)
-//    }
+    func crearBolaAzul()
+    {
+        bolaAzul = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 50, height: 50))
+        bolaAzul.position = CGPoint(x: -300, y: -50)
+        self.addChild(bolaAzul)
+    }
     
     override func sceneDidLoad()
     {
         backgroundColor = UIColor.black
         crearBola()
-//        crearBolaAzul()
-        
+        crearBolaAzul()
     }
     override func willMove(from: SKView)
     {
-        
     }
     override func didMove(to: SKView)
     {
-        
     }
-    override func didSimulatePhysics() {
-        
+    override func didSimulatePhysics()
+    {
     }
 
     
@@ -57,30 +54,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
         handleTouch(touches)
+        location = touch.location(in: self)
     }
     func handleTouch(_ touches:Set<UITouch>) {
-        let touch = touches.first
-        fuerza = touch!.force
-
+        touch = touches.first!
+        fuerza = touch.force
     }
     override func touchesEnded(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
-        
     }
     override func touchesMoved(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
-        
         handleTouch(touches)
-       
-        if(fuerza >= 1.5)
-        {
-        bolaBlanca.position = CGPoint(x: bolaBlanca.position.x + fuerza, y: bolaBlanca.position.y)
-        }
-        else
-        {
-        }
-        bolaBlanca.position = CGPoint(x: bolaBlanca.position.x - numero, y: bolaBlanca.position.y)
-
+        
+        
+            if (location.x < 0  && bolaBlanca.position.x < 300 )
+            {
+                bolaBlanca.position = CGPoint(x: bolaBlanca.position.x + fuerza * 5 , y: bolaBlanca.position.y)
+            }
+            else if (location.x > 0 && bolaBlanca.position.x > -300 )
+            {
+                bolaBlanca.position = CGPoint(x: bolaBlanca.position.x - fuerza * 5 , y: bolaBlanca.position.y)
+            }
+      
     }
     
     override func update(_ currentTime: TimeInterval) {
