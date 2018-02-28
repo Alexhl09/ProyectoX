@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7115BC9D2046344800867825 /* sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7115BC9C2046344800867825 /* sprites.swift */; };
 		714F44DE20098AD300F7E0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F44DD20098AD300F7E0E6 /* AppDelegate.swift */; };
 		714F44E020098AD300F7E0E6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 714F44DF20098AD300F7E0E6 /* GameScene.sks */; };
 		714F44E220098AD300F7E0E6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 714F44E120098AD300F7E0E6 /* Actions.sks */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7115BC9C2046344800867825 /* sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sprites.swift; sourceTree = "<group>"; };
 		714F44DA20098AD300F7E0E6 /* ProyectoX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714F44DD20098AD300F7E0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714F44DF20098AD300F7E0E6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				714F44DF20098AD300F7E0E6 /* GameScene.sks */,
 				714F44E120098AD300F7E0E6 /* Actions.sks */,
 				714F44E320098AD300F7E0E6 /* GameScene.swift */,
+				7115BC9C2046344800867825 /* sprites.swift */,
 				714F44E520098AD300F7E0E6 /* GameViewController.swift */,
 				714F44E720098AD300F7E0E6 /* Main.storyboard */,
 				714F44EA20098AD300F7E0E6 /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714F44E420098AD300F7E0E6 /* GameScene.swift in Sources */,
+				7115BC9D2046344800867825 /* sprites.swift in Sources */,
 				714F44E620098AD300F7E0E6 /* GameViewController.swift in Sources */,
 				71A37F67200D7C490054F1D8 /* MyUIView.swift in Sources */,
 				714F44F620098B3D00F7E0E6 /* PantallaInicial.swift in Sources */,
